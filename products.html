@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Adult Toys Store</title>
+    <link rel="stylesheet" href="css_style.css">
+    <link rel="stylesheet" href="css_components.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Adult Toys Store</a>
+            <div class="nav-links">
+                <a href="products.html">Products</a>
+                <a href="favourites.html">Favourites</a>
+                <a href="cart.html">Cart <span id="cart-count">0</span></a>
+                <a href="login.html" id="login-logout-btn">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <section class="products-page">
+        <div class="container">
+            <h1>Our Products</h1>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="vibrators">Vibrators</option>
+                    <option value="dildos">Dildos</option>
+                    <option value="couples">Couples Toys</option>
+                    <option value="bdsm">BDSM</option>
+                </select>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="product-grid" id="products-container">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-product-details"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js_firebase-config.js"></script>
+    <script src="js_auth.js"></script>
+    <script src="js_products.js"></script>
+    <script src="js_cart.js"></script>
+    <script src="js_favourites.js"></script>
+    <script src="js_app.js"></script>
+</body>
+</html>

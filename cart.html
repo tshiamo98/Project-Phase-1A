@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Adult Toys Store</title>
+    <link rel="stylesheet" href="css_style.css">
+    <link rel="stylesheet" href="css_components.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Adult Toys Store</a>
+            <div class="nav-links">
+                <a href="products.html">Products</a>
+                <a href="favourites.html">Favourites</a>
+                <a href="cart.html">Cart <span id="cart-count">0</span></a>
+                <a href="login.html" id="login-logout-btn">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Section -->
+    <section class="cart-page">
+        <div class="container">
+            <h1>Your Cart</h1>
+            
+            <div id="cart-items-container">
+                <!-- Cart items will be loaded here -->
+            </div>
+
+            <div class="cart-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-item">
+                    <span>Total Items:</span>
+                    <span id="total-items">0</span>
+                </div>
+                <button id="place-order-btn" class="btn-primary">Place Order</button>
+                <p class="note">Note: After placing order, we'll contact you manually to complete the purchase.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="js_firebase-config.js"></script>
+    <script src="js_auth.js"></script>
+    <script src="js_cart.js"></script>
+    <script src="js_app.js"></script>
+</body>
+</html>

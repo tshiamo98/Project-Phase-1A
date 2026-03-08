@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adult Toys Store</title>
+    <link rel="stylesheet" href="css_style.css">
+    <link rel="stylesheet" href="css_components.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Adult Toys Store</a>
+            <div class="nav-links">
+                <a href="products.html">Products</a>
+                <a href="favourites.html">Favourites</a>
+                <a href="cart.html">Cart <span id="cart-count">0</span></a>
+                <a href="login.html" id="login-logout-btn">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Adult Toys Store</h1>
+            <p>Discover our premium collection of adult toys</p>
+            <a href="products.html" class="btn-primary">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured">
+        <h2>Featured Products</h2>
+        <div class="product-grid" id="featured-products">
+            <!-- Products will be loaded here dynamically -->
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="js_firebase-config.js"></script>
+    <script src="js_auth.js"></script>
+    <script src="js_app.js"></script>
+</body>
+</html>
